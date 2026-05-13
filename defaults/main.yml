@@ -16,8 +16,8 @@ owncast_identifier: okast
 owncast_base_path: "/{{ owncast_identifier }}"
 owncast_data_path: "{{ owncast_base_path }}/data"
 
-# renovate: datasource=docker depName=gabekangas/owncast versioning=semver
-owncast_version: 0.2.3
+# renovate: datasource=docker depName=legitservices/okast versioning=loose
+owncast_version: 0.2.2-0
 
 owncast_uid: ""
 owncast_gid: ""
@@ -29,7 +29,7 @@ owncast_hostname: ""
 # This value must either be `/` or not end with a slash (e.g. `/owncast`).
 owncast_path_prefix: /
 
-owncast_container_image: "{{ owncast_container_image_registry_prefix }}legitservices/kast:{{ owncast_container_image_tag }}"
+owncast_container_image: "{{ owncast_container_image_registry_prefix }}legitservices/okast:{{ owncast_container_image_tag }}"
 owncast_container_image_tag: "{{ owncast_version }}"
 owncast_container_image_registry_prefix: "{{ owncast_container_image_registry_prefix_upstream }}"
 owncast_container_image_registry_prefix_upstream: "{{ owncast_container_image_registry_prefix_upstream_default }}"
