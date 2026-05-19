@@ -210,5 +210,19 @@ owncast_environment_variables_tz: UTC
 
 owncast_basicauth_enabled: true
 
+# Owncast admin password. Owncast only accepts this via the `--adminpassword`
+# CLI flag (no env var), so when set the role appends it to the container
+# command. Leave empty to let Owncast keep its stored/default password.
+# Set this (ideally derived from sgc_pgsk) when fronting the admin with an
+# external SSO/forward-auth layer that injects matching HTTP Basic creds.
+# Note: passed as a process argument, so it is visible in the root-only
+# systemd unit and `docker inspect` on the host (host is trusted).
+owncast_admin_password: ""
+
+# Extra Owncast application arguments appended after the image in the
+# container command (e.g. ["--streamkey=..."]). `owncast_admin_password`
+# is handled separately above.
+owncast_app_arguments: []
+
 # Additional environment variables.
 owncast_environment_variables_additional_variables: ""
