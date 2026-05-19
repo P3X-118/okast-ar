@@ -19,6 +19,9 @@ Environment="HOME={{ sysd_docker_unit_home_path }}"
 ExecStartPre=-{{ sysd_docker_host_sh }} -c '{{ sysd_docker_host_command }} stop -t {{ sysd_docker_stop_grace }} {{ owncast_identifier }} 2>/dev/null || true'
 ExecStartPre=-{{ sysd_docker_host_sh }} -c '{{ sysd_docker_host_command }} rm {{ owncast_identifier }} 2>/dev/null || true'
 
+{% set _appargs = [] %}
+{% if owncast_admin_password %}{% set _ = _appargs.append('--adminpassword=' ~ owncast_admin_password) %}{% endif %}
+{% for _a in owncast_app_arguments %}{% set _ = _appargs.append(_a) %}{% endfor %}
 ExecStartPre={{ sysd_docker_host_command }} create \
       --rm \
       --name={{ owncast_identifier }} \
@@ -43,7 +46,7 @@ ExecStartPre={{ sysd_docker_host_command }} create \
       {% for arg in owncast_container_extra_arguments %}
       {{ arg }} \
       {% endfor %}
-      {{ owncast_container_image_self_build_name if owncast_container_image_self_build else owncast_container_image }}
+      {{ owncast_container_image_self_build_name if owncast_container_image_self_build else owncast_container_image }}{% if _appargs %} {{ _appargs | join(' ') }}{% endif %}
 
 {% for network in owncast_container_additional_networks %}
 ExecStartPre={{ sysd_docker_host_command }} network connect {{ network }} {{ owncast_identifier }}
