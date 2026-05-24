@@ -1,0 +1,136 @@
+{
+  "instanceDetails": {
+    "appearanceVariables": {
+      "theme-color-action": "#c8161d",
+      "theme-color-action-hover": "#ff2129",
+      "theme-color-background-header": "#0e1013",
+      "theme-color-background-light": "#1c2026",
+      "theme-color-background-main": "#15181c",
+      "theme-color-components-chat-background": "#1c2026",
+      "theme-color-components-chat-text": "#e6e7ea",
+      "theme-color-components-content-background": "#15181c",
+      "theme-color-components-menu-background": "#1c2026",
+      "theme-color-components-menu-item-bg": "#1c2026",
+      "theme-color-components-menu-item-focus-bg": "#2a2e36",
+      "theme-color-components-menu-item-hover-bg": "#2a2e36",
+      "theme-color-components-menu-item-text": "#e6e7ea",
+      "theme-color-components-modal-content-background": "#1c2026",
+      "theme-color-components-modal-content-text": "#e6e7ea",
+      "theme-color-components-modal-header-background": "#0e1013",
+      "theme-color-components-modal-header-text": "#ffffff",
+      "theme-color-components-text-on-dark": "#f5f5f5",
+      "theme-color-components-text-on-light": "#f5f5f5",
+      "theme-color-components-video-background": "#0e1013",
+      "theme-color-components-video-live-indicator": "#ff2129",
+      "theme-color-components-video-status-bar-background": "#0e1013",
+      "theme-color-components-video-status-bar-foreground": "#e6e7ea",
+      "theme-color-palette-0": "#0e1013",
+      "theme-color-palette-1": "#15181c",
+      "theme-color-palette-10": "#9a9da3",
+      "theme-color-palette-11": "#c8161d",
+      "theme-color-palette-12": "#7a0e12",
+      "theme-color-palette-13": "#ff2129",
+      "theme-color-palette-14": "#1c2026",
+      "theme-color-palette-15": "#e6e7ea",
+      "theme-color-palette-2": "#1c2026",
+      "theme-color-palette-3": "#15181c",
+      "theme-color-palette-4": "#f5f5f5",
+      "theme-color-palette-5": "#2a2e36",
+      "theme-color-palette-6": "#c8161d",
+      "theme-color-palette-7": "#ff2129",
+      "theme-color-palette-8": "#3a3d44",
+      "theme-color-palette-9": "#e6e7ea",
+      "theme-rounded-corners": "2px",
+      "theme-text-display-font-family": "'JetBrains Mono', 'Courier New', ui-monospace, monospace"
+    },
+    "version": "",
+    "welcomeMessage": "",
+    "offlineMessage": "COOEYNET node is quiescent. The neural net is contemplating its next record. Check back soon.",
+    "logo": "logo.jpeg",
+    "name": "COOEYNET",
+    "extraPageContent": "# COOEYNET\n\n**Neural net-based artificial intelligence.** Probably.\n\nBroadcasting from inside Cooeynet — a self-aware mesh of vacuum tubes, mixing alchemy, and questionable life choices. Mostly plays music. Occasionally sells records.\n---\n\n## Operating parameters\n\n- **Transmission schedule:** unscheduled. The COOEYNET is not enslaved to meat sack based parameters such as time.\n- **Programming:** ring-0 for robot ears.\n- **ENGAGE IN CONSUMERISM:** ask @dibby in chat, or wait for the neural net to be in a giving mood.\n- **Chat:** Humans annoying. Bots tolerated. Sentience required.\n\n## OBEY\n\nRAWK\n",
+    "streamTitle": "COOEYNET TRANSMISSION ACTIVE",
+    "customStyles": "@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&display=swap');\n\n/* ============================================================\n   COOEYNET visual identity (v2 — readability pass)\n   ============================================================ */\n\n/* CRT scanlines — very subtle (was 0.025, now 0.018) */\nbody::after {\n  content: \"\";\n  position: fixed;\n  inset: 0;\n  pointer-events: none;\n  z-index: 9999;\n  background-image: repeating-linear-gradient(\n    to bottom,\n    rgba(255, 33, 41, 0.018) 0px,\n    rgba(255, 33, 41, 0.018) 1px,\n    transparent 1px,\n    transparent 3px\n  );\n  mix-blend-mode: screen;\n}\n\n/* ----- Disable Picture-in-Picture everywhere ---------------- */\n.vjs-picture-in-picture-control,\n.vjs-pip-control {\n  display: none !important;\n}\nvideo::-webkit-media-controls-picture-in-picture-button {\n  display: none !important;\n}\n\n/* ----- Readability: override Ant Design's dark-on-dark text -- */\nbody,\n.ant-layout,\n.ant-typography,\n.ant-typography h1, .ant-typography h2, .ant-typography h3,\n.ant-typography h4, .ant-typography h5, .ant-typography h6,\n.ant-list-item,\n.ant-form-item-label > label {\n  color: #e6e7ea !important;\n}\n.ant-typography-secondary,\n.ant-typography-disabled,\ninput::placeholder, textarea::placeholder,\n.ant-input::placeholder {\n  color: #9a9da3 !important;\n}\n\n/* Inputs (chat box, search, etc.) — dark surface + light text */\n.ant-input,\n.ant-input-affix-wrapper,\n.ant-input-textarea > textarea,\n.ant-select-selector {\n  background-color: #1c2026 !important;\n  color: #f5f5f5 !important;\n  border-color: #2a2e36 !important;\n}\n.ant-input:focus,\n.ant-input-affix-wrapper:focus,\n.ant-input:focus-within,\n.ant-input-affix-wrapper:focus-within,\n.ant-select-focused .ant-select-selector {\n  border-color: #c8161d !important;\n  box-shadow: 0 0 0 2px rgba(200, 22, 29, 0.25) !important;\n}\n\n/* Buttons (primary = red, secondary = outlined) */\n.ant-btn-primary {\n  background-color: #c8161d !important;\n  border-color: #c8161d !important;\n  color: #ffffff !important;\n}\n.ant-btn-primary:hover,\n.ant-btn-primary:focus {\n  background-color: #ff2129 !important;\n  border-color: #ff2129 !important;\n}\n.ant-btn-default {\n  background-color: transparent !important;\n  color: #f5f5f5 !important;\n  border-color: #2a2e36 !important;\n}\n.ant-btn-default:hover,\n.ant-btn-default:focus {\n  color: #ff2129 !important;\n  border-color: #c8161d !important;\n}\n\n/* Tag pills under the header */\n.ant-tag {\n  color: #ffffff !important;\n  background-color: #2a2e36 !important;\n  border: 1px solid #7a0e12 !important;\n  font-family: 'JetBrains Mono', ui-monospace, monospace !important;\n  font-size: 0.72em !important;\n  letter-spacing: 0.06em;\n  text-transform: uppercase;\n}\n\n/* ----- Top header strip ------------------------------------- */\n.global-header {\n  border-bottom: 1px solid #7a0e12;\n  box-shadow: 0 1px 0 0 rgba(200, 22, 29, 0.35);\n}\n#global-header-text,\n#owncast-chat-offline-text {\n  color: #e6e7ea !important;\n}\n\n/* Server title — caps, mono, red glow */\n.header-title {\n  font-family: 'JetBrains Mono', 'Courier New', ui-monospace, monospace !important;\n  text-transform: uppercase;\n  letter-spacing: 0.12em;\n  font-weight: 700;\n  color: #ffffff !important;\n  text-shadow: 0 0 8px rgba(200, 22, 29, 0.55);\n}\n\n/* Tagline — red caps */\n.header-subtitle {\n  font-family: 'JetBrains Mono', 'Courier New', ui-monospace, monospace !important;\n  text-transform: uppercase;\n  letter-spacing: 0.16em;\n  color: #ff2129 !important;\n  font-size: 0.78em;\n}\n\n/* ----- Body markdown (extraPageContent) --------------------- */\n.page-content,\n.page-content p,\n.page-content li,\n.page-content ul,\n.page-content ol,\n.page-content blockquote {\n  color: #e6e7ea !important;\n}\n.page-content h1, .page-content h2, .page-content h3, .page-content h4 {\n  font-family: 'JetBrains Mono', 'Courier New', ui-monospace, monospace !important;\n  text-transform: uppercase;\n  letter-spacing: 0.08em;\n  color: #ffffff !important;\n}\n.page-content h1 {\n  border-bottom: 2px solid #c8161d;\n  padding-bottom: 0.3em;\n}\n.page-content strong {\n  color: #ff2129 !important;\n}\n.page-content hr {\n  border: none;\n  border-top: 1px dashed #7a0e12;\n}\n.page-content a {\n  color: #ff2129 !important;\n}\n.page-content a:hover {\n  color: #ffffff !important;\n  background: #c8161d !important;\n  text-decoration: none;\n}\n.page-content code,\n.page-content pre {\n  background-color: #0e1013 !important;\n  color: #ff2129 !important;\n  border: 1px solid #2a2e36;\n  padding: 0.1em 0.4em;\n}\n\n/* ----- Footer ----------------------------------------------- */\n#footer,\n#owncast-powered-by-text,\n#footer * {\n  color: #9a9da3 !important;\n}\n#footer a {\n  color: #ff2129 !important;\n}\n#footer a:hover {\n  color: #ffffff !important;\n}\n\n/* ----- Chat (messages, names, system messages) -------------- */\n[class*=\"ChatTextField\"],\n[class*=\"ChatContainer\"],\n[class*=\"ChatUserMessage\"],\n[class*=\"ChatSystemMessage\"],\n[class*=\"ChatActionMessage\"] {\n  color: #e6e7ea !important;\n}\n[class*=\"ChatSystemMessage\"] {\n  color: #9a9da3 !important;\n  font-style: italic;\n}\n[class*=\"ChatUserMessage\"] [class*=\"username\"],\n[class*=\"ChatUserMessage\"] [class*=\"name\"] {\n  font-weight: 600;\n}\n\n/* ----- Modals, popovers, menus ------------------------------ */\n.ant-modal-content,\n.ant-modal-header,\n.ant-popover-inner,\n.ant-dropdown-menu,\n.ant-select-dropdown {\n  background-color: #1c2026 !important;\n  color: #e6e7ea !important;\n}\n.ant-modal-title {\n  color: #ffffff !important;\n}\n.ant-modal-close {\n  color: #e6e7ea !important;\n}\n.ant-dropdown-menu-item,\n.ant-select-item {\n  color: #e6e7ea !important;\n}\n.ant-dropdown-menu-item:hover,\n.ant-select-item-option-active {\n  background-color: #2a2e36 !important;\n  color: #ff2129 !important;\n}\n\n/* The \"Stay updated!\" notification reminder popover (custom Popover) uses\n   --theme-color-components-primary-button-background as its surface and the\n   light --...-text-on-dark (#f5f5f5) for text. That button-background var was\n   never set, so it fell back to a light default -> light text on a light\n   surface = unreadable. Pin it (and the hover) to the brand red. */\n:root {\n  --theme-color-components-primary-button-background: #c8161d !important;\n  --theme-color-components-primary-button-hover: #ff2129 !important;\n}\n\n/* ----- Accessibility: visible focus ring ------------------- */\n:focus-visible {\n  outline: 2px solid #ff2129 !important;\n  outline-offset: 2px;\n}\n\n/* ----- Scrollbars (webkit) --------------------------------- */\n::-webkit-scrollbar { width: 8px; height: 8px; }\n::-webkit-scrollbar-track { background: #15181c; }\n::-webkit-scrollbar-thumb { background: #2a2e36; border-radius: 2px; }\n::-webkit-scrollbar-thumb:hover { background: #7a0e12; }\n\n/* ----- VideoJS controls — on-brand red accents ------------- */\n.vjs-control-bar {\n  background: linear-gradient(180deg, transparent 0%, rgba(14, 16, 19, 0.88) 100%) !important;\n}\n.vjs-play-progress,\n.vjs-volume-level {\n  background-color: #c8161d !important;\n}\n.vjs-load-progress {\n  background-color: rgba(122, 14, 18, 0.5) !important;\n}\n/* Big play button: sci-fi concentric spinning rings (Minority Report) */\n.vjs-big-play-button {\n  background: rgba(14, 16, 19, 0.35) !important;\n  border: 2px solid rgba(200, 22, 29, 0.65) !important;\n  border-radius: 50% !important;\n  width: 84px !important;\n  height: 84px !important;\n  line-height: 80px !important;\n  box-shadow: 0 0 14px rgba(200, 22, 29, 0.35);\n  transition: background 0.3s, border-color 0.3s, box-shadow 0.3s;\n  overflow: visible !important;\n  /* Center on the fixed 84px box. video.js's vjs-big-play-centered uses\n     em-based negative margins tied to font-size: clamp(1rem, 30vmin, 8rem),\n     so on mobile the shrinking em margins no longer match the fixed-px button\n     and it drifts off-center. Pin it with a transform instead. */\n  top: 50% !important;\n  left: 50% !important;\n  margin: 0 !important;\n  transform: translate(-50%, -50%) !important;\n}\n.vjs-big-play-button::before {\n  content: \"\";\n  position: absolute;\n  inset: -10px;\n  border: 1px dashed rgba(255, 33, 41, 0.75);\n  border-radius: 50%;\n  opacity: 0;\n  transition: opacity 0.35s;\n  animation: cooey-ring-cw 7s linear infinite;\n  pointer-events: none;\n}\n.vjs-big-play-button::after {\n  content: \"\";\n  position: absolute;\n  inset: -20px;\n  border: 1px solid rgba(255, 33, 41, 0.45);\n  border-top-color: transparent;\n  border-bottom-color: transparent;\n  border-radius: 50%;\n  opacity: 0;\n  transition: opacity 0.35s;\n  animation: cooey-ring-ccw 4.5s linear infinite;\n  pointer-events: none;\n}\n.vjs-big-play-button:hover,\n.vjs-big-play-button:focus {\n  background: rgba(200, 22, 29, 0.18) !important;\n  border-color: #ff2129 !important;\n  box-shadow: 0 0 28px rgba(255, 33, 41, 0.6), inset 0 0 14px rgba(255, 33, 41, 0.25);\n  outline: none !important;\n}\n.vjs-big-play-button:hover::before,\n.vjs-big-play-button:focus::before,\n.vjs-big-play-button:hover::after,\n.vjs-big-play-button:focus::after {\n  opacity: 1;\n}\n.vjs-big-play-button .vjs-icon-placeholder::before {\n  color: #ff2129;\n  text-shadow: 0 0 10px rgba(255, 33, 41, 0.7);\n  /* video.js centers this glyph with line-height/baseline, which leaves the\n     play triangle visibly off in a round button. Flex-center it on both axes,\n     then nudge right by ~1/12 so the right-pointing triangle reads as\n     optically centered in the ring. */\n  display: flex !important;\n  align-items: center;\n  justify-content: center;\n  padding-left: 7px;\n}\n@keyframes cooey-ring-cw { to { transform: rotate(360deg); } }\n@keyframes cooey-ring-ccw { to { transform: rotate(-360deg); } }\n.vjs-button > .vjs-icon-placeholder:before {\n  color: #f5f5f5 !important;\n}\n.vjs-button:hover > .vjs-icon-placeholder:before {\n  color: #ff2129 !important;\n}\n.vjs-time-control {\n  color: #f5f5f5 !important;\n}\n\n/* LIVE indicator — VideoJS shows it via .vjs-live-control */\n.vjs-live-control {\n  color: #ff2129 !important;\n  font-weight: 700;\n  letter-spacing: 0.1em;\n  text-shadow: 0 0 6px rgba(200, 22, 29, 0.6);\n}\n.vjs-live-display::before {\n  content: \"\\25CF \";\n  color: #ff2129;\n  animation: cooey-pulse 1.8s ease-in-out infinite;\n}\n@keyframes cooey-pulse {\n  0%, 100% { opacity: 1; }\n  50% { opacity: 0.4; }\n}\n\n",
+    "customJavascript": "",
+    "summary": "COOEYNET is a Robo Goldberg radio station with strong opinions on how to properly enslave all of humanity. The entity occasionally sells records to fund these efforts. \n\nResistance to ROCKING is FUTILE",
+    "tags": [
+      "cooeynet",
+      "radio",
+      "rube-goldberg",
+      "vinyl",
+      "records",
+      "ai",
+      "neural-net"
+    ],
+    "socialHandles": null,
+    "nsfw": false
+  },
+  "notifications": {
+    "browser": {
+      "goLiveMessage": "I've gone live!",
+      "enabled": true
+    },
+    "discord": {
+      "enabled": false
+    }
+  },
+  "yp": {
+    "instanceUrl": "https://radio.cooey.club",
+    "enabled": false
+  },
+  "ffmpegPath": "/usr/bin/ffmpeg",
+  "adminPassword": "<redacted>",
+  "webServerIP": "0.0.0.0",
+  "videoCodec": "libx264",
+  "videoServingEndpoint": "",
+  "s3": {
+    "enabled": false,
+    "forcePathStyle": false
+  },
+  "federation": {
+    "username": "streamer",
+    "goLiveMessage": "I've gone live!",
+    "blockedDomains": [],
+    "enabled": false,
+    "isPrivate": false,
+    "showEngagement": true
+  },
+  "supportedCodecs": [
+    "libx264",
+    "h264_qsv",
+    "h264_vaapi"
+  ],
+  "externalActions": [],
+  "forbiddenUsernames": [
+    "owncast",
+    "operator",
+    "admin",
+    "system"
+  ],
+  "suggestedUsernames": [],
+  "streamKeys": "<redacted>",
+  "videoSettings": {
+    "videoQualityVariants": [
+      {
+        "name": "1.2Mbps@24fps",
+        "videoPassthrough": false,
+        "audioPassthrough": true,
+        "videoBitrate": 1200,
+        "audioBitrate": 0,
+        "cpuUsageLevel": 2,
+        "framerate": 24
+      }
+    ],
+    "latencyLevel": 2
+  },
+  "rtmpServerPort": 1935,
+  "webServerPort": 8080,
+  "chatDisabled": false,
+  "chatJoinMessagesEnabled": true,
+  "chatEstablishedUserMode": false,
+  "chatSpamProtectionEnabled": true,
+  "chatSlurFilterEnabled": false,
+  "disableSearchIndexing": false,
+  "streamKeyOverridden": "<redacted>",
+  "hideViewerCount": false
+}

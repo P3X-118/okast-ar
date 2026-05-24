@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&display=swap');
+
+/* ============================================================
+   COOEYNET visual identity (v2 — readability pass)
+   ============================================================ */
+
+/* CRT scanlines — very subtle (was 0.025, now 0.018) */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 33, 41, 0.018) 0px,
+    rgba(255, 33, 41, 0.018) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  mix-blend-mode: screen;
+}
+
+/* ----- Disable Picture-in-Picture everywhere ---------------- */
+.vjs-picture-in-picture-control,
+.vjs-pip-control {
+  display: none !important;
+}
+video::-webkit-media-controls-picture-in-picture-button {
+  display: none !important;
+}
+
+/* ----- Readability: override Ant Design's dark-on-dark text -- */
+body,
+.ant-layout,
+.ant-typography,
+.ant-typography h1, .ant-typography h2, .ant-typography h3,
+.ant-typography h4, .ant-typography h5, .ant-typography h6,
+.ant-list-item,
+.ant-form-item-label > label {
+  color: #e6e7ea !important;
+}
+.ant-typography-secondary,
+.ant-typography-disabled,
+input::placeholder, textarea::placeholder,
+.ant-input::placeholder {
+  color: #9a9da3 !important;
+}
+
+/* Inputs (chat box, search, etc.) — dark surface + light text */
+.ant-input,
+.ant-input-affix-wrapper,
+.ant-input-textarea > textarea,
+.ant-select-selector {
+  background-color: #1c2026 !important;
+  color: #f5f5f5 !important;
+  border-color: #2a2e36 !important;
+}
+.ant-input:focus,
+.ant-input-affix-wrapper:focus,
+.ant-input:focus-within,
+.ant-input-affix-wrapper:focus-within,
+.ant-select-focused .ant-select-selector {
+  border-color: #c8161d !important;
+  box-shadow: 0 0 0 2px rgba(200, 22, 29, 0.25) !important;
+}
+
+/* Buttons (primary = red, secondary = outlined) */
+.ant-btn-primary {
+  background-color: #c8161d !important;
+  border-color: #c8161d !important;
+  color: #ffffff !important;
+}
+.ant-btn-primary:hover,
+.ant-btn-primary:focus {
+  background-color: #ff2129 !important;
+  border-color: #ff2129 !important;
+}
+.ant-btn-default {
+  background-color: transparent !important;
+  color: #f5f5f5 !important;
+  border-color: #2a2e36 !important;
+}
+.ant-btn-default:hover,
+.ant-btn-default:focus {
+  color: #ff2129 !important;
+  border-color: #c8161d !important;
+}
+
+/* Tag pills under the header */
+.ant-tag {
+  color: #ffffff !important;
+  background-color: #2a2e36 !important;
+  border: 1px solid #7a0e12 !important;
+  font-family: 'JetBrains Mono', ui-monospace, monospace !important;
+  font-size: 0.72em !important;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* ----- Top header strip ------------------------------------- */
+.global-header {
+  border-bottom: 1px solid #7a0e12;
+  box-shadow: 0 1px 0 0 rgba(200, 22, 29, 0.35);
+}
+#global-header-text,
+#owncast-chat-offline-text {
+  color: #e6e7ea !important;
+}
+
+/* Server title — caps, mono, red glow */
+.header-title {
+  font-family: 'JetBrains Mono', 'Courier New', ui-monospace, monospace !important;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  color: #ffffff !important;
+  text-shadow: 0 0 8px rgba(200, 22, 29, 0.55);
+}
+
+/* Tagline — red caps */
+.header-subtitle {
+  font-family: 'JetBrains Mono', 'Courier New', ui-monospace, monospace !important;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #ff2129 !important;
+  font-size: 0.78em;
+}
+
+/* ----- Body markdown (extraPageContent) --------------------- */
+.page-content,
+.page-content p,
+.page-content li,
+.page-content ul,
+.page-content ol,
+.page-content blockquote {
+  color: #e6e7ea !important;
+}
+.page-content h1, .page-content h2, .page-content h3, .page-content h4 {
+  font-family: 'JetBrains Mono', 'Courier New', ui-monospace, monospace !important;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #ffffff !important;
+}
+.page-content h1 {
+  border-bottom: 2px solid #c8161d;
+  padding-bottom: 0.3em;
+}
+.page-content strong {
+  color: #ff2129 !important;
+}
+.page-content hr {
+  border: none;
+  border-top: 1px dashed #7a0e12;
+}
+.page-content a {
+  color: #ff2129 !important;
+}
+.page-content a:hover {
+  color: #ffffff !important;
+  background: #c8161d !important;
+  text-decoration: none;
+}
+.page-content code,
+.page-content pre {
+  background-color: #0e1013 !important;
+  color: #ff2129 !important;
+  border: 1px solid #2a2e36;
+  padding: 0.1em 0.4em;
+}
+
+/* ----- Footer ----------------------------------------------- */
+#footer,
+#owncast-powered-by-text,
+#footer * {
+  color: #9a9da3 !important;
+}
+#footer a {
+  color: #ff2129 !important;
+}
+#footer a:hover {
+  color: #ffffff !important;
+}
+
+/* ----- Chat (messages, names, system messages) -------------- */
+[class*="ChatTextField"],
+[class*="ChatContainer"],
+[class*="ChatUserMessage"],
+[class*="ChatSystemMessage"],
+[class*="ChatActionMessage"] {
+  color: #e6e7ea !important;
+}
+[class*="ChatSystemMessage"] {
+  color: #9a9da3 !important;
+  font-style: italic;
+}
+[class*="ChatUserMessage"] [class*="username"],
+[class*="ChatUserMessage"] [class*="name"] {
+  font-weight: 600;
+}
+
+/* ----- Modals, popovers, menus ------------------------------ */
+.ant-modal-content,
+.ant-modal-header,
+.ant-popover-inner,
+.ant-dropdown-menu,
+.ant-select-dropdown {
+  background-color: #1c2026 !important;
+  color: #e6e7ea !important;
+}
+.ant-modal-title {
+  color: #ffffff !important;
+}
+.ant-modal-close {
+  color: #e6e7ea !important;
+}
+.ant-dropdown-menu-item,
+.ant-select-item {
+  color: #e6e7ea !important;
+}
+.ant-dropdown-menu-item:hover,
+.ant-select-item-option-active {
+  background-color: #2a2e36 !important;
+  color: #ff2129 !important;
+}
+
+/* The "Stay updated!" notification reminder popover (custom Popover) uses
+   --theme-color-components-primary-button-background as its surface and the
+   light --...-text-on-dark (#f5f5f5) for text. That button-background var was
+   never set, so it fell back to a light default -> light text on a light
+   surface = unreadable. Pin it (and the hover) to the brand red. */
+:root {
+  --theme-color-components-primary-button-background: #c8161d !important;
+  --theme-color-components-primary-button-hover: #ff2129 !important;
+}
+
+/* ----- Accessibility: visible focus ring ------------------- */
+:focus-visible {
+  outline: 2px solid #ff2129 !important;
+  outline-offset: 2px;
+}
+
+/* ----- Scrollbars (webkit) --------------------------------- */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: #15181c; }
+::-webkit-scrollbar-thumb { background: #2a2e36; border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: #7a0e12; }
+
+/* ----- VideoJS controls — on-brand red accents ------------- */
+.vjs-control-bar {
+  background: linear-gradient(180deg, transparent 0%, rgba(14, 16, 19, 0.88) 100%) !important;
+}
+.vjs-play-progress,
+.vjs-volume-level {
+  background-color: #c8161d !important;
+}
+.vjs-load-progress {
+  background-color: rgba(122, 14, 18, 0.5) !important;
+}
+/* Big play button: sci-fi concentric spinning rings (Minority Report) */
+.vjs-big-play-button {
+  background: rgba(14, 16, 19, 0.35) !important;
+  border: 2px solid rgba(200, 22, 29, 0.65) !important;
+  border-radius: 50% !important;
+  width: 84px !important;
+  height: 84px !important;
+  line-height: 80px !important;
+  box-shadow: 0 0 14px rgba(200, 22, 29, 0.35);
+  transition: background 0.3s, border-color 0.3s, box-shadow 0.3s;
+  overflow: visible !important;
+  /* Center on the fixed 84px box. video.js's vjs-big-play-centered uses
+     em-based negative margins tied to font-size: clamp(1rem, 30vmin, 8rem),
+     so on mobile the shrinking em margins no longer match the fixed-px button
+     and it drifts off-center. Pin it with a transform instead. */
+  top: 50% !important;
+  left: 50% !important;
+  margin: 0 !important;
+  transform: translate(-50%, -50%) !important;
+}
+.vjs-big-play-button::before {
+  content: "";
+  position: absolute;
+  inset: -10px;
+  border: 1px dashed rgba(255, 33, 41, 0.75);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.35s;
+  animation: cooey-ring-cw 7s linear infinite;
+  pointer-events: none;
+}
+.vjs-big-play-button::after {
+  content: "";
+  position: absolute;
+  inset: -20px;
+  border: 1px solid rgba(255, 33, 41, 0.45);
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.35s;
+  animation: cooey-ring-ccw 4.5s linear infinite;
+  pointer-events: none;
+}
+.vjs-big-play-button:hover,
+.vjs-big-play-button:focus {
+  background: rgba(200, 22, 29, 0.18) !important;
+  border-color: #ff2129 !important;
+  box-shadow: 0 0 28px rgba(255, 33, 41, 0.6), inset 0 0 14px rgba(255, 33, 41, 0.25);
+  outline: none !important;
+}
+.vjs-big-play-button:hover::before,
+.vjs-big-play-button:focus::before,
+.vjs-big-play-button:hover::after,
+.vjs-big-play-button:focus::after {
+  opacity: 1;
+}
+.vjs-big-play-button .vjs-icon-placeholder::before {
+  color: #ff2129;
+  text-shadow: 0 0 10px rgba(255, 33, 41, 0.7);
+  /* video.js centers this glyph with line-height/baseline, which leaves the
+     play triangle visibly off in a round button. Flex-center it on both axes,
+     then nudge right by ~1/12 so the right-pointing triangle reads as
+     optically centered in the ring. */
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  padding-left: 7px;
+}
+@keyframes cooey-ring-cw { to { transform: rotate(360deg); } }
+@keyframes cooey-ring-ccw { to { transform: rotate(-360deg); } }
+.vjs-button > .vjs-icon-placeholder:before {
+  color: #f5f5f5 !important;
+}
+.vjs-button:hover > .vjs-icon-placeholder:before {
+  color: #ff2129 !important;
+}
+.vjs-time-control {
+  color: #f5f5f5 !important;
+}
+
+/* LIVE indicator — VideoJS shows it via .vjs-live-control */
+.vjs-live-control {
+  color: #ff2129 !important;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-shadow: 0 0 6px rgba(200, 22, 29, 0.6);
+}
+.vjs-live-display::before {
+  content: "\25CF ";
+  color: #ff2129;
+  animation: cooey-pulse 1.8s ease-in-out infinite;
+}
+@keyframes cooey-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
