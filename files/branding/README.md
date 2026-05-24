@@ -20,10 +20,11 @@ overwrite the live config — you apply these deliberately.
   snapshot for reference/restore (secrets stripped).
 - `cooeynet-logo.jpg` — radio.cooey.club logo (800x800 JPEG, acquired
   2026-05-20). Matches the live logo as of 2026-05-24 (md5 eee19c8c…).
-- `cooeynet-customstyles.css` — custom CSS. NOTE: as of 2026-05-24 this is
-  **NOT applied live** (`customStyleValues` is null in the running instance);
-  the cooeynet visual theme currently comes from the bundled `static/web`.
-  Push it only deliberately with `--css` after reviewing.
+- `cooeynet-customstyles.css` — custom CSS injected into the page. Applied
+  live as of 2026-05-24 (`--css`); pushed to the `customStyles` config field
+  (`/api/admin/config/customstyles`). NOTE: verify it via the `customStyles`
+  field in `serverconfig`, NOT `customStyleValues` (that field is the
+  appearance color variables and is unrelated to this CSS).
 
 ## Apply (radio.cooey.club)
 
